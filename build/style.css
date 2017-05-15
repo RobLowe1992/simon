@@ -1,0 +1,92 @@
+body {
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Ravi Prakash', cursive;
+}
+.instructions h1 {
+    margin: 0 auto;
+    padding: 5px;
+    background-color: orange;
+    width: 1160px;
+}
+.instructions p {
+    background-color: black;
+    color: white;
+    padding: 20px 300px;
+    width: 1170px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    background-image: url('images/egypt.jpg');
+    border-left: 10px black solid;
+    border-right: 10px black solid;
+    border-top: 10px orange solid;
+    border-bottom: 10px orange solid;
+
+}
+div.spacer {
+    width: 33%;
+    height: 500px;
+    position: relative;
+}
+
+div.pillar {
+
+    height: 280px;
+    width: 45px;
+    background-image: url('images/pillar-md.png');
+    position: absolute;
+    bottom: 0;
+    left: 165px;
+}
+
+header {
+    text-align: center;
+}
+
+header div span {
+    font-size: 70px;
+}
+.fly-in-text {
+    position: relative;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+    color: white;
+    width:1170px;
+    height: 100px;
+
+}
+.fly-in-text span {
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all 2.5s ease;
+}
+.fly-in-text span:last-child {
+    margin-right: 0;
+}
+.fly-in-text.temp-hide span{
+    opacity: 0
+}
+.fly-in-text.temp-hide span:nth-child(1) {transform: translateX(90px) translateY(-90px)}
+.fly-in-text.temp-hide span:nth-child(2) {transform: translateX(-150px) translateY(190px)}
+.fly-in-text.temp-hide span:nth-child(3) {transform: translateX(-130px) translateY(-170px)}
+.fly-in-text.temp-hide span:nth-child(4) {transform: translateX(-200px) translateY(-270px)}
+.fly-in-text.temp-hide span:nth-child(5) {transform: translateX(50px) translateY(-50px)}
+.fly-in-text.temp-hide span:nth-child(6) {transform: translateX(-150px) translateY(50px)}
+.fly-in-text.temp-hide span:nth-child(7) {transform: translateX(130px) translateY(-30px)}
+.fly-in-text.temp-hide span:nth-child(8) {transform: translateX(-30px) translateY(310px)}
+.fly-in-text.temp-hide span:nth-child(9) {transform: translateX(10px) translateY(-10px)}
+.fly-in-text.temp-hide span:nth-child(10) {transform: translateX(-10px) translateY(110px)}
+.fly-in-text.temp-hide span:nth-child(11) {transform: translateX(-80px) translateY(80px)}
+.fly-in-text.temp-hide span:nth-child(12) {transform: translateX(80px) translateY(-180px)}
+.fly-in-text.temp-hide span:nth-child(13) {transform: translateX(-60px) translateY(60px)}
+.fly-in-text.temp-hide span:nth-child(14) {transform: translateX(160px) translateY(-20px)}

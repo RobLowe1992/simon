@@ -1,0 +1,1 @@
+"use strict";$(function(){var t=$(".fly-in-text");setTimeout(function(){t.removeClass("temp-hide")},500)});
