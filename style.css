@@ -1,5 +1,5 @@
 body {
-    margin: 0 auto;
+    margin: 50px auto;
     position: relative;
     font-family: 'Ravi Prakash', cursive;
 }
@@ -27,7 +27,35 @@ body {
     border-right: 10px black solid;
     border-top: 10px orange solid;
     border-bottom: 10px orange solid;
+    position: relative;
 
+}
+.disk {
+    height: 26px;
+    border: 2px black solid;
+    background-color: silver;
+    border-radius: 25px;
+}
+.disk:nth-of-type(1){
+    width: 100px;
+    position: absolute;
+    left: 135px;
+    top: 416px;
+    z-index: 1;
+}
+.disk:nth-of-type(2){
+    width: 125px;
+    position: absolute;
+    left: 122.5px;
+    top: 444px;
+    z-index: 1;
+}
+.disk:nth-of-type(3){
+    width: 150px;
+    position: absolute;
+    left: 110px;
+    top: 472px;
+    z-index: 1;
 }
 div.spacer {
     width: 33%;
