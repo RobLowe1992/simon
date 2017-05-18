@@ -1,76 +1,103 @@
 body {
-    margin: 50px auto;
+    margin: 0 auto;
     position: relative;
-    font-family: 'Ravi Prakash', cursive;
+    font-family: 'Barrio', cursive;
 }
 .instructions h1 {
     margin: 0 auto;
     padding: 5px;
     background-color: orange;
-    width: 1160px;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 .instructions p {
     background-color: black;
     color: white;
-    padding: 20px 300px;
-    width: 1170px;
+    padding: 20px 180px;
+    width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
 }
-
 .container {
-    width: 1150px;
-    margin: 0 auto;
-    display: flex;
-    background-image: url('images/egypt.jpg');
+    width: 800px;
+    height: 800px;
+    margin: 5% auto;
     border-left: 10px black solid;
     border-right: 10px black solid;
     border-top: 10px orange solid;
     border-bottom: 10px orange solid;
     position: relative;
-
+    border-top-right-radius: 410px;
+    border-bottom-left-radius: 410px;
+    border-top-left-radius: 410px;
+    border-bottom-right-radius: 410px;
 }
-.disk {
-    height: 26px;
-    border: 2px black solid;
-    background-color: silver;
-    border-radius: 25px;
+.holder {
+    width: 100%;
+    height: 50%;
+    display: flex;
 }
-.disk:nth-of-type(1){
-    width: 100px;
+.blue{
+    height: 100%;
+    width: 50%;
+    background-color: blue;
+    border-top-left-radius: 400px;
+    box-sizing: border-box;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+.red{
+    height: 100%;
+    width: 50%;
+    background-color: red;
+    border-top-right-radius: 400px;
+    border-bottom: 5px solid black;
+    box-sizing: border-box;
+    border-left: 5px solid black;
+}
+.green{
+    height: 100%;
+    width: 50%;
+    background-color: green;
+    border-bottom-left-radius: 400px;
+    box-sizing: border-box;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+}
+.yellow{
+    height: 100%;
+    width: 50%;
+    background-color: yellow;
+    border-bottom-right-radius: 400px;
+    box-sizing: border-box;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+.circle {
+    background-color: #444;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
     position: absolute;
-    left: 135px;
-    top: 416px;
+    top: 250px;
+    left: 250px;
+    outline: none;
+    border: 10px black solid;
+    box-shadow: 1px 2px 1000px #fff;
     z-index: 1;
 }
-.disk:nth-of-type(2){
-    width: 125px;
-    position: absolute;
-    left: 122.5px;
-    top: 444px;
-    z-index: 1;
+.circle h1 {
+    color: white;
+    font-family: 'Barrio';
+    font-size: 30px;
 }
-.disk:nth-of-type(3){
-    width: 150px;
-    position: absolute;
-    left: 110px;
-    top: 472px;
-    z-index: 1;
+.circle:hover {
+    cursor: pointer;
 }
-div.spacer {
-    width: 33%;
-    height: 500px;
-    position: relative;
-}
-
-div.pillar {
-
-    height: 280px;
-    width: 45px;
-    background-image: url('images/pillar-md.png');
-    position: absolute;
-    bottom: 0;
-    left: 165px;
+.circle:active {
+    transform: translateY(5px);
+    background-color: black;
 }
 
 header {
@@ -87,7 +114,7 @@ header div span {
     transform: translateX(-50%) translateY(-50%);
     background-color: black;
     color: white;
-    width:1170px;
+    width:100%;
     height: 100px;
 
 }
@@ -104,17 +131,41 @@ header div span {
 .fly-in-text.temp-hide span{
     opacity: 0
 }
-.fly-in-text.temp-hide span:nth-child(1) {transform: translateX(90px) translateY(-90px)}
-.fly-in-text.temp-hide span:nth-child(2) {transform: translateX(-150px) translateY(190px)}
-.fly-in-text.temp-hide span:nth-child(3) {transform: translateX(-130px) translateY(-170px)}
-.fly-in-text.temp-hide span:nth-child(4) {transform: translateX(-200px) translateY(-270px)}
-.fly-in-text.temp-hide span:nth-child(5) {transform: translateX(50px) translateY(-50px)}
-.fly-in-text.temp-hide span:nth-child(6) {transform: translateX(-150px) translateY(50px)}
-.fly-in-text.temp-hide span:nth-child(7) {transform: translateX(130px) translateY(-30px)}
-.fly-in-text.temp-hide span:nth-child(8) {transform: translateX(-30px) translateY(310px)}
-.fly-in-text.temp-hide span:nth-child(9) {transform: translateX(10px) translateY(-10px)}
-.fly-in-text.temp-hide span:nth-child(10) {transform: translateX(-10px) translateY(110px)}
-.fly-in-text.temp-hide span:nth-child(11) {transform: translateX(-80px) translateY(80px)}
-.fly-in-text.temp-hide span:nth-child(12) {transform: translateX(80px) translateY(-180px)}
-.fly-in-text.temp-hide span:nth-child(13) {transform: translateX(-60px) translateY(60px)}
-.fly-in-text.temp-hide span:nth-child(14) {transform: translateX(160px) translateY(-20px)}
+.fly-in-text.temp-hide span:nth-child(1) {
+    transform: translateX(90px) translateY(-90px);
+}
+.fly-in-text.temp-hide span:nth-child(2) {
+    transform: translateX(-150px) translateY(190px)
+}
+.fly-in-text.temp-hide span:nth-child(3) {
+    transform: translateX(-130px) translateY(-170px)
+}
+.fly-in-text.temp-hide span:nth-child(4) {
+    transform: translateX(-200px) translateY(-270px)
+}
+
+.fly-in-text.temp-hide span:nth-child(5) {
+    transform: translateX(50px) translateY(-50px)
+}
+.fly-in-text span:nth-child(1) {
+    color: blue;
+}
+.fly-in-text span:nth-child(2) {
+    color: red;
+}
+.fly-in-text span:nth-child(3) {
+    color: white;
+}
+.fly-in-text span:nth-child(4) {
+    color: green;
+}
+.fly-in-text span:nth-child(5) {
+    color: yellow;
+}
+.rotate{
+    transform: rotate(360deg);
+    transition: all 1.5s ease;
+}
+.opacity{
+    opacity: 0.5;
+}

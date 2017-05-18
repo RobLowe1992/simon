@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tower of Hanoi</title>
-    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <title>Simon</title>
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
         <div class="fly-in-text temp-hide">
-                        <span>T</span>
-                        <span>O</span>
-                        <span>W</span>
-                        <span>E</span>
-                        <span>R</span>
-                        <span>&nbsp</span>
-                        <span>O</span>
-                        <span>F</span>
-                        <span>&nbsp</span>
-                        <span>H</span>
-                        <span>A</span>
-                        <span>N</span>
-                        <span>O</span>
+                        <span>S</span>
                         <span>I</span>
+                        <span>M</span>
+                        <span>O</span>
+                        <span>N</span>
         </div>
         <div class="instructions">
-            <h1>Instuctions</h1>
-            <p> The objective of the game is to move all of the disks from the tower 1 over to tower 3. You may use tower 2 as a buffer. You cannot place a larger disk onto a smaller disk</p>
+            <a><h1>Instuctions</h1></a>
+            <p> Simon will test your memory by creating a sequence of lights. It is your job to repeat the sequence. As you level up the length of the sequence will increase.</p>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="disk"></div>
-            <div class="disk"></div>
-            <div class="disk"></div>
-            <div class="spacer">
-                <div class="pillar"></div>
+            <button class="circle" id="circle">
+                <div>
+                    <h1>Click to Start</h1>
+                    <h2 id="score"></h2>
+                </div>
+            </button>
+            <div class="holder">
+                <div id="blue" class="colors blue" data-id="1"></div>
+                <div id="red" class="colors red" data-id="2"></div>
             </div>
-            <div class="spacer">
-                <div class="pillar"></div>
-            </div>
-            <div class="spacer">
-                <div class="pillar"></div>
+            <div class="holder">
+                <div id="green" class="colors green" data-id="3"></div>
+                <div id="yellow" class="colors yellow" data-id="4"></div>
             </div>
         </div>
     </main>
