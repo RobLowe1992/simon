@@ -15,7 +15,13 @@
                         <span>N</span>
         </div>
         <div class="instructions">
-            <a><h1>Instuctions</h1></a>
+            <ul>
+                <li>
+                    <li id="easy" class="modes">Easy Mode</li>
+                    <h1>Instuctions</h1>
+                    <li id="hard" class="modes">Hard Mode</li>
+                </li>
+            </ul>
             <p> Simon will test your memory by creating a sequence of lights. It is your job to repeat the sequence. As you level up the length of the sequence will increase.</p>
         </div>
     </header>
@@ -23,8 +29,10 @@
         <div class="container">
             <button class="circle" id="circle">
                 <div>
-                    <h1>Click to Start</h1>
+                    <h2 id="timer"></h2>
+                    <h1 id="play">Click to Play</h1>
                     <h2 id="score"></h2>
+                    <h2 id="highScore"></h2>
                 </div>
             </button>
             <div class="holder">

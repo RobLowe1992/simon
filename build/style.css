@@ -19,10 +19,24 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
 }
+.instructions {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: orange;
+}
+.modes {
+    cursor: pointer;
+}
+.modes:hover {
+    color: white;
+}
+.colors {
+    cursor: pointer;
+}
 .container {
     width: 800px;
     height: 800px;
-    margin: 5% auto;
+    margin: 15px auto;
     border-left: 10px black solid;
     border-right: 10px black solid;
     border-top: 10px orange solid;
@@ -32,6 +46,7 @@ body {
     border-bottom-left-radius: 410px;
     border-top-left-radius: 410px;
     border-bottom-right-radius: 410px;
+    box-shadow: 0 0 100px #111;
 }
 .holder {
     width: 100%;
@@ -73,6 +88,12 @@ body {
     box-sizing: border-box;
     border-top: 5px solid black;
     border-left: 5px solid black;
+}
+.blue:active, .red:active {
+    transform: translateY(-2px);
+}
+.green:active, .yellow:active {
+    transform: translateY(2px);
 }
 .circle {
     background-color: #444;
@@ -166,6 +187,21 @@ header div span {
     transform: rotate(360deg);
     transition: all 1.5s ease;
 }
+.rotateBoard{
+    transform: rotate(360deg);
+    transition: all 2s ease;
+}
 .opacity{
     opacity: 0.5;
+}
+#score, #timer, #highScore {
+    color: white;
+    font-size: 20px;
+    font-family: 'Barrio', cursive;
+}
+ul {
+    background-color: orange;
+    margin: 0;
+    list-style-type: none;
+    display: inline-flex;
 }
