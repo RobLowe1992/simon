@@ -120,7 +120,14 @@ body {
     transform: translateY(5px);
     background-color: black;
 }
+ul:nth-of-type(1) li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+ul:nth-of-type(1) li:nth-of-type(2) {
+    font-size: 35px;
+}
 header {
     text-align: center;
 }
