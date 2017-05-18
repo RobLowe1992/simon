@@ -6,7 +6,6 @@ $circle = $('#circle');
 var interval;
 let gameObject;
 $(function() {
-
     const $headerText = $('.fly-in-text');
     setTimeout(function() {
         $headerText.removeClass('temp-hide');
@@ -44,23 +43,26 @@ $(function() {
             }, 1000);
         }
     }
+    function circleClick() {
+        $circle.click(function() {
+            $circle.off('click');
+            clearTimeout(interval);
+            $(this).addClass('rotate');
+            gameObject.levelSequence();
+            $('.colors').off('click');
 
-    $circle.click(function() {
-        clearTimeout(interval);
-        $(this).toggleClass('rotate');
-        gameObject.levelSequence();
-        $('.colors').off('click');
-
-        $('.colors').click(function(){
-            gameObject.playerSelections.push(`#${this.id}`);
-            console.log(gameObject.playerSelections);
-            checkForWin();
+            $('.colors').click(function(){
+                gameObject.playerSelections.push(`#${this.id}`);
+                console.log(gameObject.playerSelections);
+                checkForWin();
             // for (let i = 0; i < gameObject.colorSequence.length; i++) {
             //     playerSelections[i] = (`$${this.id}`);
             //     console.log(playerSelections)
             // }
+            })
         })
-    })
+    }
+    circleClick();
     function checkForWin(){
         if (gameObject.playerSelections.length === gameObject.colorSequence.length){
             function arraysEqual(playerSelections, colorSequence) {
@@ -81,6 +83,8 @@ $(function() {
                 gameObject.playerSelections = [];
                 gameObject.currentLevel += 1;
                 $('.colors').off('click');
+                circleClick();
+                $circle.removeClass('rotate');
 
             } else {
                 gameObject.colorSequence = [];
@@ -88,6 +92,8 @@ $(function() {
                 gameObject.currentLevel = 1
                 $('.colors').off('click')
                 console.log('Better luck next time!');
+                circleClick();
+                $circle.removeClass('rotate');
             }
         }
     }
