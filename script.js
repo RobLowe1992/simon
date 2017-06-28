@@ -31,22 +31,22 @@ $(function() {
         timer: 0,
         colorSequence: [],
         playerSelections: [],
-        hardMode: function(){
+        hardMode(){
             gameBoardInterval = setInterval(function () {
                 $('.container').toggleClass('rotateBoard');
             },2000);
         },
         // Illuminates the colors in the color sequence array
-        illuminate:function(color){
+        illuminate(color){
             setTimeout(function(){
-                $(color).css('opacity', .5);
+                $(color).css('opacity', .25);
                 setTimeout(function() {
                     $(color).css('opacity', 1);
                 },500);
             },500);
         },
         // Randomly selcts colors from the colorIds array and pushes them to the color sequence array
-        levelSequence: function(){
+        levelSequence(){
             const iterationCount = this.currentLevel + 2;
             for (let i = 0; i < iterationCount; i++) {
                 this.colorSequence.push(this.colorIds[Math.floor(Math.random() * 4)]);
@@ -54,7 +54,7 @@ $(function() {
             this.startGame(this.colorSequence);
         },
         // Starts the game and interval by calling the illuminate function and passing in the color sequence array
-        startGame: function(sequence) {
+        startGame(sequence) {
             let i = 0;
             const self = this;
             interval = setInterval(function(){
@@ -68,9 +68,10 @@ $(function() {
                     }, 1000)
                 }
             }, 1000);
+            $('.colors:active').css('opacity','0');
         },
         // Resets the game stats by clearing the colorSequence and playerSelection array, turns off the circle click event listener, stops the in-game timer, removes the rotate class, and updates the player score
-        resetStats: function() {
+        resetStats() {
             let highScore = localStorage.getItem('highScore');
             if(highScore !== null){
                 if (this.currentLevel > highScore) {
@@ -88,9 +89,16 @@ $(function() {
             circleClick();
             $circle.removeClass('rotate');
             $('#score').text(`Current Level: ${this.currentLevel}`);
+            $('.colors').mousedown(function() {
+                $(this).css('opacity', '0')
+            });
+            $('.colors').mouseup(function() {
+                $(this).css('opacity', '1')
+            });
+
         },
         // Checks conditions to see if the user has won or lost the game
-        checkForWin: function(){
+        checkForWin(){
         if (this.playerSelections.length === this.colorSequence.length){
             function arraysEqual(playerSelections, colorSequence) {
                 if(gameObject.playerSelections.length !== gameObject.colorSequence.length)
@@ -109,13 +117,13 @@ $(function() {
                 this.currentLevel += 1;
                 this.resetStats();
                 $timer.text(`Solved in ${this.timer} seconds`);
-                $('#play').text('Next Level')
+                $('#play').text('Next Level');
             } else {
                 console.log('Better luck next time!');
                 this.currentLevel = 1;
                 this.resetStats();
                 $timer.text(`Epic Fail`);
-                $('#play').text('Play Again')
+                $('#play').text('Play Again');
             }
         }
     }

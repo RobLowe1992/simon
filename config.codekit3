@@ -42,6 +42,12 @@
 		"oAP": "\/build\/index.html",
 		"oF": 0
 		},
+	"\/KarmaticArcade.otf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/KarmaticArcade.otf",
+		"oF": 0
+		},
 	"\/readMe.md": {
 		"cS": 0,
 		"eF": 1,
